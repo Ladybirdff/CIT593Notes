@@ -1,0 +1,45 @@
+ssh dichenli@eniac.seas.upenn.edu
+ls
+exit //exit from eniac
+ls
+pwd
+cd ~/Desktop/eniacRecitation
+//write a HelloWorld.c program in this directory
+#include <stdio.h>
+int main() {
+	fprintf(stdout, "Hello World\n");
+	return 0;
+}
+//terminal, upload file
+scp HelloWorld.c dichenli@eniac.seas.upenn.edu:~/Desktop
+
+ssh dichenli@eniac.seas.upenn.edu
+rm -r recitation
+mkdir recitation
+mv hellowworld.c recitation
+cd recitation
+gcc helloWord.c
+./a.out //it will print out the "Hello World", type a.out won't work
+gcc helloWorld.c -o HelloWorld //it will compile to HelloWorld filename
+nano helloWorld.c // open an editor, do some change to the program
+mv helloWorld.c newName.c
+
+nano Makefile
+//in the editor
+all: helloWorld.c // means this only works when helloWorld.c exists
+	gcc helloWorld.c -o helloWorld
+clean:
+	rm helloWorld
+
+//back to terminal
+make all //gcc helloWorld.c -o helloWorld will be executed
+make clean // will remove helloWorld 
+
+mv helloWorld.c foo.c
+make all // will throw exception, no helloWorld.c found
+
+cat HelloWorld.c // show the file content, not editable
+
+
+//buffer overflow attack: write code inside input to make buffer overflow and overwrite stack
+./badbuf < input.txt // a way to use input file for program input

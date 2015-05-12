@@ -1,0 +1,9 @@
+reset
+
+as io_test io_test
+as os os
+
+ld io_test
+ld os
+
+break set END

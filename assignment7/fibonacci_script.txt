@@ -1,0 +1,5 @@
+as fibonacci fibonacci
+reset
+ld fibonacci
+break set INFINITE_LOOP
+continue

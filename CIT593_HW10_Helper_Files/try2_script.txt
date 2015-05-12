@@ -1,0 +1,10 @@
+clear
+reset
+
+as try2 user try2  # Links 3 .ASM files into 1 .OBJ
+ld try2				 	 # loads the linked .OBJ
+
+as os os
+ld os
+
+break set END

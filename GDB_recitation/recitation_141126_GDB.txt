@@ -1,0 +1,10 @@
+clang -g buggyCode.c
+gdb a.out
+r //run
+break main
+break main:41
+s //step
+c //continue
+//remove breakpoint: http://stackoverflow.com/questions/4340718/remove-a-single-breakpoint-with-gdb
+print file1 //print out whatever is in file1 (or other variable)
+print/x file2 //print in hex

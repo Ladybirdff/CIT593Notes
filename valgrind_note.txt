@@ -1,0 +1,2 @@
+valgrind -v --leak-check=full --show-reachable=yes ./Driver
+//run the program with details about where memory is not freed

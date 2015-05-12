@@ -1,0 +1,7 @@
+as power power
+reset
+set R0 -7
+set R1 3
+ld power
+break set INFINITE_LOOP
+continue

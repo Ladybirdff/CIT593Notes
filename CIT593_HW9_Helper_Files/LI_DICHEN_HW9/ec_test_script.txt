@@ -1,0 +1,9 @@
+reset
+
+as ec_test ec_test
+as os os
+
+ld ec_test
+ld os
+
+break set END
